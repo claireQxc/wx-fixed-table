@@ -1,0 +1,99 @@
+page {
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color: #222;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 24rpx;
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px 0px rgba(1, 17, 40, 0.06);
+  --head-background-color: #fff;
+  --head-height: 76rpx;
+  --head-font-size: 28rpx;
+  --head-color: #666;
+  --column-width: 186rpx;
+  --body-font-size: 28rpx;
+  --border-bottom: 1rpx solid #EDEDED;
+  --fixed-box-shadow: 5px 0 10px -5px rgb(0 0 0 / 12%);
+  --tr-height: 88rpx;
+}
+.table {
+  display: block;
+  position: relative;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+}
+.table__head {
+  display: flex;
+  position: sticky;
+  top: 0rpx;
+  z-index: 100;
+  height: var(--head-height);
+  line-height: var(--head-height);
+  white-space: nowrap;
+  font-size: var(--head-font-size);
+  color: var(--head-color);
+  border-bottom: var(--border-bottom);
+  white-space: nowrap;
+}
+.table__head__td{
+  width: var(--column-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--head-background-color);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.table__head__td:nth-child(1) {
+  position: sticky;
+  z-index: 101;
+  left: 0rpx;
+  box-shadow: var(--fixed-box-shadow);
+}
+.table__head__td__text{
+  display: inline;
+}
+.table__row{
+  position: relative;
+  height: var(--tr-height);
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: var(--border-bottom);
+}
+.first_row_fixed:nth-child(2){
+  position: sticky;
+  top: var(--head-height);
+  z-index: 11;
+  height: var(--tr-height);
+}
+.table__row__td{
+  white-space: nowrap;
+  width: var(--column-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-sizing: content-box;
+  font-size: var(--body-font-size);
+  line-height: var(--tr-height);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.table__row__td:nth-child(1) {
+  position: sticky;
+  z-index: 10;
+  left: 0;
+  box-shadow: var(--fixed-box-shadow);
+}
